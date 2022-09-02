@@ -12,8 +12,8 @@ function changeTime() {
 }
 var newtime = window.setInterval(changeTime,1000);
 
-lzh_1(1);
-function lzh_1(a) {
+lzh_1(1,astanly01);
+function lzh_1(a,b) {
     var xhr = new XMLHttpRequest();
     var obj = {
         chart_num: a
@@ -28,5 +28,5 @@ function lzh_1(a) {
     xhr.open("post", "http://127.0.0.1:8080/shapan/analysis_charts/astanly/", true);
     xhr.setRequestHeader("Content-type", "application/json");
     xhr.send(JSON.stringify(obj));
-    
+    return b=res;
 }
