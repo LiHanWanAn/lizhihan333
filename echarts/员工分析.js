@@ -12,8 +12,8 @@ function changeTime() {
 }
 var newtime = window.setInterval(changeTime,1000);
 
-lzh_1(1,astanly01);
-function lzh_1(a,b) {
+lzh(1,astanly01);
+function lzh(a,b) {
     var xhr = new XMLHttpRequest();
     var obj = {
         chart_num: a
