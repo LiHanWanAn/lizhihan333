@@ -27,3 +27,41 @@ header .time{
 .k{
     height: 60px;
 }
+.lzh_YG{
+    text-align: center;
+}
+.lzh_YG h3{
+    color: aqua;
+}
+.lzh_YG p{
+    color: rgba(137, 141, 145, 0.575);
+    font-size: 9px;
+}
+.lzh_ZJ{
+    overflow: hidden;
+}
+.L_ZJ{
+    float: left;
+    width: 150px;
+    height: 150px;
+}
+.ZJ1{
+    background-image: url(./image/zxh001.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.ZJ2{
+    background-image: url(./image/zxh002.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.ZJ3{
+    background-image: url(./image/zxh003.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.ZJ4{
+    background-image: url(./image/zxh004.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
