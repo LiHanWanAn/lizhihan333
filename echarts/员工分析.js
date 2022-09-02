@@ -11,3 +11,22 @@ function changeTime() {
     d.innerHTML=time[0]+'年'+time[1]+'月'+time[2]+'日'+time[3]+'时'+time[4]+'分'+time[5]+'秒'
 }
 var newtime = window.setInterval(changeTime,1000);
+
+lzh_1(1);
+function lzh_1(a) {
+    var xhr = new XMLHttpRequest();
+    var obj = {
+        chart_num: a
+    }
+    xhr.onreadystatechange = function () {
+        if (xhr.status == 200 && xhr.readyState == 4) {
+            var res = xhr.response;
+            res = JSON.parse(res);
+            console.log(res)
+        }
+    }
+    xhr.open("post", "http://127.0.0.1:8080/shapan/analysis_charts/astanly/", true);
+    xhr.setRequestHeader("Content-type", "application/json");
+    xhr.send(JSON.stringify(obj));
+    
+}

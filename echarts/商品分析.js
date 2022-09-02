@@ -3,12 +3,12 @@
 
 // }(实参);
 //
-lzh_1();
-lzh_1_01();
-function lzh_1() {
+lzh(1);
+lzh01();
+function lzh(a) {
     var xhr = new XMLHttpRequest();
     var obj = {
-        chart_num: 1
+        chart_num: a
     }
     xhr.onreadystatechange = function () {
         if (xhr.status == 200 && xhr.readyState == 4) {
@@ -22,7 +22,7 @@ function lzh_1() {
     xhr.send(JSON.stringify(obj));
     
 }
-function lzh_1_01(params) {
+function lzh01() {
     var dom = document.getElementById('lzh_1_01');
     var myChart = echarts.init(dom, null, {
       renderer: 'canvas',
