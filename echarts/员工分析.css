@@ -66,6 +66,19 @@ header .time{
     background-size: 100% 100%;
 }
 .ZJ_P1{
+    text-align: center;
     color: white;
     font-weight: 700;
+}
+.ZJ_P2{
+    text-align: center;
+    color: aqua;
+    font-size: 28px;
+}
+.L_ZJ_p1{
+    color: aqua;
+}
+.L_ZJ_p2{
+    color: rgb(255, 213, 0);
+    font-size: 22px;
 }

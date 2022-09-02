@@ -12,8 +12,9 @@ function changeTime() {
 }
 var newtime = window.setInterval(changeTime,1000);
 
-lzh(1,astanly01);
-function lzh(a,b) {
+var lzh1= lzh(1);
+console.log(lzh1)
+function lzh(a) {
     var xhr = new XMLHttpRequest();
     var obj = {
         chart_num: a
@@ -23,10 +24,10 @@ function lzh(a,b) {
             var res = xhr.response;
             res = JSON.parse(res);
             console.log(res)
+            return res;
         }
     }
     xhr.open("post", "http://127.0.0.1:8080/shapan/analysis_charts/astanly/", true);
     xhr.setRequestHeader("Content-type", "application/json");
     xhr.send(JSON.stringify(obj));
-    return b=res;
 }
