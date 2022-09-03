@@ -29,6 +29,7 @@ header .time{
 }
 .lzh_YG{
     text-align: center;
+    margin-bottom: 20px;
 }
 .lzh_YG h3{
     color: aqua;
@@ -87,4 +88,50 @@ header .time{
     margin-top: 7px;
     color: rgb(255, 213, 0);
     font-size: 22px;
+}
+main{
+    overflow: hidden;
+    margin-top: 20px;
+}
+.L_m1{
+    float: left;
+    width: 880px;
+    overflow: hidden;
+}
+.L_m11{
+    float: left;
+    width: 480px;
+}
+.L_m12{
+    float: left;
+    width: 320px;
+    margin: 0 40px;
+}
+.L_m2{
+    float: left;
+    width: 320px;
+    margin: 0 40px;
+}
+.text1{
+    width: 300px;
+    height: 30px;
+    background-image: url(./images/back_02.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    color: rgb(0, 255, 255);
+    font-size: 16px;
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+.border{
+    border: 1px cyan solid;
+    margin: 2px;
+}
+.b1{
+    height: 240px;
+    padding-top: 20px;
+}
+.b2{
+    height: 240px;
+    padding-top: 20px;
 }
