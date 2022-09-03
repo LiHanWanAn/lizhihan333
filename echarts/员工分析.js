@@ -19,7 +19,9 @@ var y2 = window.setTimeout(Lzh2, 1000);
 lzh(3);
 var y3 = window.setTimeout(Lzh3, 1000);
 lzh(4);
+var y4 = window.setTimeout(Lzh4, 1000);
 lzh(5);
+var y5 = window.setTimeout(Lzh5, 1000);
 lzh(6);
 function lzh(a) {
     var xhr = new XMLHttpRequest();
@@ -89,7 +91,6 @@ function Lzh2() {
 }
 function Lzh3() {
     var y3 = JSON.parse(sessionStorage['y3']);
-    console.log(y3);
     var chartDom = document.getElementsByClassName('b2')[0];
     var myChart = echarts.init(chartDom);
     var option;
@@ -97,12 +98,12 @@ function Lzh3() {
     option = {
         xAxis: {
             type: 'value',
-            axisLabel: { textStyle: { color: "#00ffff" }}
+            axisLabel: { textStyle: { color: "#00ffff" } }
         },
         yAxis: {
             type: 'category',
-            data: [y3.source[1][0],y3.source[2][0]],
-            axisLabel: { textStyle: { color: "#00ffff" }}
+            data: [y3.source[1][0], y3.source[2][0]],
+            axisLabel: { textStyle: { color: "#00ffff" } }
         },
         series: [
             {
@@ -112,6 +113,115 @@ function Lzh3() {
                 backgroundStyle: {
                     color: 'rgba(180, 180, 180, 0.2)'
                 }
+            }
+        ]
+    };
+
+    option && myChart.setOption(option);
+}
+function Lzh4() {
+    var y4 = JSON.parse(sessionStorage['y4']);
+    console.log(y4);
+}
+function Lzh5() {
+    var y5 = JSON.parse(sessionStorage['y5']);
+    console.log(y5);
+    var chartDom = document.getElementsByClassName("b4")[0];
+    var myChart = echarts.init(chartDom);
+    var option;
+
+    option = {
+        color: ['#80FFA5', '#00DDFF'],
+        title: {
+            text: ''
+        },
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: {
+                type: 'cross',
+                label: {
+                    backgroundColor: '#6a7985'
+                }
+            }
+        },
+        legend: {
+            data: ['Line 1', 'Line 2']
+        },
+        toolbox: {
+            feature: {
+                
+            }
+        },
+        grid: {
+            left: '3%',
+            right: '4%',
+            bottom: '3%',
+            containLabel: true
+        },
+        xAxis: [
+            {
+                type: 'category',
+                boundaryGap: false,
+                data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+            }
+        ],
+        yAxis: [
+            {
+                type: 'value'
+            }
+        ],
+        series: [
+            {
+                name: 'Line 1',
+                type: 'line',
+                smooth: true,
+                lineStyle: {
+                    width: 0
+                },
+                showSymbol: false,
+                areaStyle: {
+                    opacity: 0.8,
+                    color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                        {
+                            offset: 0,
+                            color: 'rgba(128, 255, 165,0.5)'
+                        },
+                        {
+                            offset: 1,
+                            color: 'rgba(1, 191, 236,0.5)'
+                        }
+                    ])
+                },
+                emphasis: {
+                    focus: 'series'
+                },
+                data: [140, 232, 101, 264, 90, 340, 250]
+            },
+            {
+                name: 'Line 2',
+                type: 'line',
+                smooth: true,
+                lineStyle: {
+                    width: 0
+                },
+                showSymbol: false,
+                areaStyle: {
+                    opacity: 0.8,
+                    color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                        {
+                            offset: 0,
+                            color: 'rgba(92, 146, 31,0.5)'
+                        },
+                        {
+                            offset: 1,
+                            color: 'rgba(136, 255, 0,0.5)'
+                        }
+                    ])
+                },
+                emphasis: {
+                    focus: 'series'
+                },
+                data: [120, 282, 111, 234, 220, 340, 310]
             }
         ]
     };

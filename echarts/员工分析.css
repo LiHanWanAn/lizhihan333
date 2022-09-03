@@ -12,6 +12,12 @@ body{
     background-size: 100%;
     background-repeat: no-repeat;
 }
+ul{
+    overflow: hidden;
+}
+li{
+    list-style:none ;
+}
 #backg{
     width: 1200px;
     margin: auto;
@@ -107,10 +113,19 @@ main{
     width: 320px;
     margin: 0 40px;
 }
+.L_m13{
+    float: left;
+    width: 840px;
+}
+.m13{
+    margin-top: 20px;
+}
+.b4{
+    height: 300px;
+}
 .L_m2{
     float: left;
     width: 320px;
-    margin: 0 40px;
 }
 .text1{
     width: 300px;
@@ -134,4 +149,64 @@ main{
 .b2{
     height: 240px;
     padding-top: 20px;
+}
+.b3{
+    padding-top: 20px;
+}
+.b3L{
+    margin: 5px;
+}
+.b3T{
+    color: white;
+    font-weight: 700;
+    text-align: center;
+}
+.liT{
+    float: left;
+    height: 40px;
+    line-height: 40px;
+}
+.liT0{
+    width: 50px;
+}
+.liT1{
+    width: 100px;
+}
+.liT2{
+    width: 75px;
+}
+.line1{
+    margin: 0 20px;
+    border-top: 2px aqua solid;
+}
+.b3N{
+margin: auto;
+}
+.b3Nul{
+    margin-top: 15px;
+}
+.liN{
+    float: left;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+}
+.imgORnum{
+    color: white;
+    width: 50px;
+}
+.Name{
+    color: white;
+    width: 100px;
+}
+.Woli{
+    color: rgb(190, 193, 196);
+    width: 75px;
+}
+.SJ{
+    width: 75px;
+}
+.line2{
+    margin: 0 20px;
+    border-top: 1px rgb(4, 171, 171) solid;
 }
