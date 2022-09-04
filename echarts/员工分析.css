@@ -117,6 +117,31 @@ main{
     float: left;
     width: 840px;
 }
+.b5d{
+    overflow: hidden;
+    margin-top: 20px;
+    text-align: center;
+}
+.b5{
+    width: 400px;
+    float: left;
+    height: 50px;
+    line-height: 50px;
+    color: white;
+}
+.b6{
+    float: left;
+    width: 400px;
+    height: 50px;
+    line-height: 50px;
+    margin: auto;
+    color: #fff;
+}
+.b5ds{
+    color: yellow;
+    font-size: 22px;
+    font-weight: 700;
+}
 .m13{
     margin-top: 20px;
 }

@@ -22,6 +22,8 @@ lzh(4);
 var y4 = window.setTimeout(Lzh4, 1000);
 lzh(5);
 var y5 = window.setTimeout(Lzh5, 1000);
+var y5_1 = window.setTimeout(Lzh5_1, 1000);
+var y5_2 = window.setTimeout(Lzh5_2, 1000);
 lzh(6);
 function lzh(a) {
     var xhr = new XMLHttpRequest();
@@ -121,11 +123,19 @@ function Lzh3() {
 }
 function Lzh4() {
     var y4 = JSON.parse(sessionStorage['y4']);
-    console.log(y4);
+    var d0 = document.getElementsByClassName('b5ds')[0];
+    var d1 = document.getElementsByClassName('b5ds')[1];
+    d0.innerHTML = y4.导购互动行为次数;
+    d1.innerHTML = y4.员工工作干扰次数;
 }
 function Lzh5() {
     var y5 = JSON.parse(sessionStorage['y5']);
-    console.log(y5);
+    var arr11 = [y5.source1[1][0], y5.source1[2][0], y5.source1[3][0], y5.source1[4][0], y5.source1[5][0], y5.source1[6][0]];
+    var arr12 = [y5.source1[1][1], y5.source1[2][1], y5.source1[3][1], y5.source1[4][1], y5.source1[5][1], y5.source1[6][1]];
+    var arr13 = [y5.source1[1][2], y5.source1[2][2], y5.source1[3][2], y5.source1[4][2], y5.source1[5][2], y5.source1[6][2]];
+    var arr14 = [y5.source1[7][0], y5.source1[8][0], y5.source1[9][0], y5.source1[10][0], y5.source1[11][0], y5.source1[12][0]];
+    var arr15 = [y5.source1[7][1], y5.source1[8][1], y5.source1[9][1], y5.source1[10][1], y5.source1[11][1], y5.source1[12][1]];
+    var arr16 = [y5.source1[7][2], y5.source1[8][2], y5.source1[9][2], y5.source1[10][2], y5.source1[11][2], y5.source1[12][2]];
     var chartDom = document.getElementsByClassName("b4")[0];
     var myChart = echarts.init(chartDom);
     var option;
@@ -145,11 +155,15 @@ function Lzh5() {
             }
         },
         legend: {
-            data: ['Line 1', 'Line 2']
+            data: ['销售次数', '导购互动'],
+            textStyle: {
+                color: 'aqua',
+                fontsize: 12
+            }
         },
         toolbox: {
             feature: {
-                
+
             }
         },
         grid: {
@@ -162,43 +176,29 @@ function Lzh5() {
             {
                 type: 'category',
                 boundaryGap: false,
-                data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+                data: arr11,
+                axisLabel: {
+                    show: true,
+                    textStyle: {
+                        color: 'aqua'
+                    }
+                }
             }
         ],
         yAxis: [
             {
-                type: 'value'
+                type: 'value',
+                axisLabel: {
+                    show: true,
+                    textStyle: {
+                        color: 'aqua'
+                    }
+                }
             }
         ],
         series: [
             {
-                name: 'Line 1',
-                type: 'line',
-                smooth: true,
-                lineStyle: {
-                    width: 0
-                },
-                showSymbol: false,
-                areaStyle: {
-                    opacity: 0.8,
-                    color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
-                        {
-                            offset: 0,
-                            color: 'rgba(128, 255, 165,0.5)'
-                        },
-                        {
-                            offset: 1,
-                            color: 'rgba(1, 191, 236,0.5)'
-                        }
-                    ])
-                },
-                emphasis: {
-                    focus: 'series'
-                },
-                data: [140, 232, 101, 264, 90, 340, 250]
-            },
-            {
-                name: 'Line 2',
+                name: '导购互动',
                 type: 'line',
                 smooth: true,
                 lineStyle: {
@@ -221,7 +221,301 @@ function Lzh5() {
                 emphasis: {
                     focus: 'series'
                 },
-                data: [120, 282, 111, 234, 220, 340, 310]
+                data: arr13
+            },
+            {
+                name: '销售次数',
+                type: 'line',
+                smooth: true,
+                lineStyle: {
+                    width: 0
+                },
+                showSymbol: false,
+                areaStyle: {
+                    opacity: 0.8,
+                    color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                        {
+                            offset: 0,
+                            color: 'rgba(128, 255, 165,0.5)'
+                        },
+                        {
+                            offset: 1,
+                            color: 'rgba(1, 191, 236,0.5)'
+                        }
+                    ])
+                },
+                emphasis: {
+                    focus: 'series'
+                },
+                data: arr12
+            }
+        ]
+    };
+
+    option && myChart.setOption(option);
+}
+function Lzh5_1() {
+    var y5 = JSON.parse(sessionStorage['y5']);
+    var arr21 = [y5.source2[1][0], y5.source2[2][0], y5.source2[3][0], y5.source2[4][0], y5.source2[5][0], y5.source2[6][0]];
+    var arr22 = [y5.source2[1][1], y5.source2[2][1], y5.source2[3][1], y5.source2[4][1], y5.source2[5][1], y5.source2[6][1]];
+    var arr23 = [y5.source2[1][2], y5.source2[2][2], y5.source2[3][2], y5.source2[4][2], y5.source2[5][2], y5.source2[6][2]];
+    var arr24 = [y5.source2[7][0], y5.source2[8][0], y5.source2[9][0], y5.source2[10][0], y5.source2[11][0], y5.source2[12][0]];
+    var arr25 = [y5.source2[7][1], y5.source2[8][1], y5.source2[9][1], y5.source2[10][1], y5.source2[11][1], y5.source2[12][1]];
+    var arr26 = [y5.source2[7][2], y5.source2[8][2], y5.source2[9][2], y5.source2[10][2], y5.source2[11][2], y5.source2[12][2]];
+    var chartDom = document.getElementsByClassName("b4")[1];
+    var myChart = echarts.init(chartDom);
+    var option;
+
+    option = {
+        color: ['#80FFA5', '#00DDFF'],
+        title: {
+            text: ''
+        },
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: {
+                type: 'cross',
+                label: {
+                    backgroundColor: '#6a7985'
+                }
+            }
+        },
+        legend: {
+            data: ['销售额', '导购互动'],
+            textStyle: {
+                color: 'aqua',
+                fontsize: 12
+            }
+        },
+        toolbox: {
+            feature: {
+
+            }
+        },
+        grid: {
+            left: '3%',
+            right: '4%',
+            bottom: '3%',
+            containLabel: true
+        },
+        xAxis: [
+            {
+                type: 'category',
+                boundaryGap: false,
+                data: arr21,
+                axisLabel: {
+                    show: true,
+                    textStyle: {
+                        color: 'aqua'
+                    }
+                }
+            }
+        ],
+        yAxis: [
+            {
+                type: 'value',
+                axisLabel: {
+                    show: true,
+                    textStyle: {
+                        color: 'aqua'
+                    }
+                }
+            }
+        ],
+        series: [
+            {
+                name: '导购互动',
+                type: 'line',
+                smooth: true,
+                lineStyle: {
+                    width: 0
+                },
+                showSymbol: false,
+                areaStyle: {
+                    opacity: 0.8,
+                    color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                        {
+                            offset: 0,
+                            color: 'rgba(92, 146, 31,0.5)'
+                        },
+                        {
+                            offset: 1,
+                            color: 'rgba(136, 255, 0,0.5)'
+                        }
+                    ])
+                },
+                emphasis: {
+                    focus: 'series'
+                },
+                data: arr23
+            },
+            {
+                name: '销售额',
+                type: 'line',
+                smooth: true,
+                lineStyle: {
+                    width: 0
+                },
+                showSymbol: false,
+                areaStyle: {
+                    opacity: 0.8,
+                    color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                        {
+                            offset: 0,
+                            color: 'rgba(128, 255, 165,0.5)'
+                        },
+                        {
+                            offset: 1,
+                            color: 'rgba(1, 191, 236,0.5)'
+                        }
+                    ])
+                },
+                emphasis: {
+                    focus: 'series'
+                },
+                data: arr22
+            }
+        ]
+    };
+
+    option && myChart.setOption(option);
+}
+function Lzh5_2() {
+    var y5 = JSON.parse(sessionStorage['y5']);
+    console.log(y5);
+    var arr11 = [y5.source1[1][0], y5.source1[2][0], y5.source1[3][0], y5.source1[4][0], y5.source1[5][0], y5.source1[6][0]];
+    var arr12 = [y5.source1[1][1], y5.source1[2][1], y5.source1[3][1], y5.source1[4][1], y5.source1[5][1], y5.source1[6][1]];
+    var arr13 = [y5.source1[1][2], y5.source1[2][2], y5.source1[3][2], y5.source1[4][2], y5.source1[5][2], y5.source1[6][2]];
+    var arr14 = [y5.source1[7][0], y5.source1[8][0], y5.source1[9][0], y5.source1[10][0], y5.source1[11][0], y5.source1[12][0]];
+    var arr15 = [y5.source1[7][1], y5.source1[8][1], y5.source1[9][1], y5.source1[10][1], y5.source1[11][1], y5.source1[12][1]];
+    var arr16 = [y5.source1[7][2], y5.source1[8][2], y5.source1[9][2], y5.source1[10][2], y5.source1[11][2], y5.source1[12][2]];
+    var arr21 = [y5.source2[1][0], y5.source2[2][0], y5.source2[3][0], y5.source2[4][0], y5.source2[5][0], y5.source2[6][0]];
+    var arr22 = [y5.source2[1][1], y5.source2[2][1], y5.source2[3][1], y5.source2[4][1], y5.source2[5][1], y5.source2[6][1]];
+    var arr23 = [y5.source2[1][2], y5.source2[2][2], y5.source2[3][2], y5.source2[4][2], y5.source2[5][2], y5.source2[6][2]];
+    var arr24 = [y5.source2[7][0], y5.source2[8][0], y5.source2[9][0], y5.source2[10][0], y5.source2[11][0], y5.source2[12][0]];
+    var arr25 = [y5.source2[7][1], y5.source2[8][1], y5.source2[9][1], y5.source2[10][1], y5.source2[11][1], y5.source2[12][1]];
+    var arr26 = [y5.source2[7][2], y5.source2[8][2], y5.source2[9][2], y5.source2[10][2], y5.source2[11][2], y5.source2[12][2]];
+    var arr30 = [
+        (arr22[0] / arr12[0]).toFixed(2),
+        (arr22[1] / arr12[1]).toFixed(2),
+        (arr22[2] / arr12[2]).toFixed(2),
+        (arr22[3] / arr12[3]).toFixed(2),
+        (arr22[4] / arr12[4]).toFixed(2),
+        (arr22[5] / arr12[5]).toFixed(2),
+    ]
+    console.log(arr30)
+    var chartDom = document.getElementsByClassName("b4")[2];
+    var myChart = echarts.init(chartDom);
+    var option;
+
+    option = {
+        color: ['#80FFA5', '#00DDFF'],
+        title: {
+            text: ''
+        },
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: {
+                type: 'cross',
+                label: {
+                    backgroundColor: '#6a7985'
+                }
+            }
+        },
+        legend: {
+            data: ['客单价', '导购互动'],
+            textStyle: {
+                color: 'aqua',
+                fontsize: 12
+            }
+        },
+        toolbox: {
+            feature: {
+
+            }
+        },
+        grid: {
+            left: '3%',
+            right: '4%',
+            bottom: '3%',
+            containLabel: true
+        },
+        xAxis: [
+            {
+                type: 'category',
+                boundaryGap: false,
+                data: arr21,
+                axisLabel: {
+                    show: true,
+                    textStyle: {
+                        color: 'aqua'
+                    }
+                }
+            }
+        ],
+        yAxis: [
+            {
+                type: 'value',
+                axisLabel: {
+                    show: true,
+                    textStyle: {
+                        color: 'aqua'
+                    }
+                }
+            }
+        ],
+        series: [
+            {
+                name: '导购互动',
+                type: 'line',
+                smooth: true,
+                lineStyle: {
+                    width: 0
+                },
+                showSymbol: false,
+                areaStyle: {
+                    opacity: 0.8,
+                    color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                        {
+                            offset: 0,
+                            color: 'rgba(92, 146, 31,0.5)'
+                        },
+                        {
+                            offset: 1,
+                            color: 'rgba(136, 255, 0,0.5)'
+                        }
+                    ])
+                },
+                emphasis: {
+                    focus: 'series'
+                },
+                data: arr23
+            },
+            {
+                name: '客单价',
+                type: 'line',
+                smooth: true,
+                lineStyle: {
+                    width: 0
+                },
+                showSymbol: false,
+                areaStyle: {
+                    opacity: 0.8,
+                    color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                        {
+                            offset: 0,
+                            color: 'rgba(128, 255, 165,0.5)'
+                        },
+                        {
+                            offset: 1,
+                            color: 'rgba(1, 191, 236,0.5)'
+                        }
+                    ])
+                },
+                emphasis: {
+                    focus: 'series'
+                },
+                data: arr30
             }
         ]
     };
